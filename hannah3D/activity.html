@@ -1,129 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-	.profile-pic {
-            position: absolute;
-            top: 65px;
-            right: 400px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #2c3e50;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
- 	  input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #1a242f;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Resume - Custom Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .resume-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      display: flex;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .left-panel {
+      background-color: #00bcd4;
+      color: white;
+      padding: 30px;
+      width: 35%;
+    }
+
+    .left-panel img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+    }
+
+    .right-panel {
+      padding: 30px;
+      width: 65%;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .section p, .section ul {
+      font-size: 14px;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      .resume-container, .resume-container * {
+        visibility: visible;
+      }
+      .resume-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        
-        <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/514047910_24262889299985016_7965543114708043270_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFitsC5Bq-sQlpLGJA9qoPOnl9HvUw_4C2eX0e9TD_gLbbMq1uBuJwJwrc1qz0yMQIYeZPfNxTcuthNIcUdg2G1&_nc_ohc=2BvlX-w-DbwQ7kNvwEbwZ5T&_nc_oc=AdnLGM3d2f9moya6XtXuPTifMBoCsX42ZKB8K7hZHLqHsONrtZfM_vA2TeFT37-ATkE&_nc_zt=23&_nc_ht=scontent.fmnl9-3.fna&_nc_gid=7yKS127u4tbfyPtX1E4hAw&oh=00_AfSfKCQDiSqabEQXVxMLTbj5pazH9yzxLuBZMvvbwCBPig&oe=687278F4" alt="Profile Picture" class="profile-pic">
-        <h1>Hannah Camille M. Cunanan</h1>
-        <p><strong>"We fix IT, you relax"</strong></p>
 
-        <div class="section">
-            <h2>About Me:</h2>
-            <p>As of now, I am 3rd year College student in Dominican College of Tarlac. I'm 25 years old and I live in Cut Cut 1st Capas, Tarlac.
-sometimes I love reading and listening music. My Goal is to be come a succesful IT Professional</p>
-        </div>
 
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Science in Information Technology, Dominical College of Tarlac, 2025</li>
-                <li>High School, Capas High School, 2019</li>
-            </ul>
-        </div>
+<div class="resume-container">
 
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming</strong> – HTML, Java, JavaScript</li>
-                <li><strong>Editing</strong> – Blender, Adobe Photoshop, Canva</li>
-            </ul>
-        </div>
+  <div class="left-panel text-center">
+    <img src="https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/514047910_24262889299985016_7965543114708043270_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFitsC5Bq-sQlpLGJA9qoPOnl9HvUw_4C2eX0e9TD_gLbbMq1uBuJwJwrc1qz0yMQIYeZPfNxTcuthNIcUdg2G1&_nc_ohc=GK482Dv7CtkQ7kNvwE9JjVJ&_nc_oc=Adk1u25ViieIz8n9vUz6m0R7ZjyNBEGhs41mG3jhBciQhenQFEUTb3Plj1EaZmhHY7s&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=8VQRLDSR0B5Rjw3-Gm94Bg&oh=00_AfXIfXewWWPp4qoLZIw3BQ8B8UZMaPIncGlOuuUhP5BFPg&oe=6895A0F4" alt="Profile Photo">
+    <h3>Hannah Camille Cunanan</h3>
+    <p class="text-white-50 mb-4">Aspiring IT Professional</p>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <ul>
-                <li>Money Counter</li>
-                <li>StockEase - A Generic Inventory System</li>
-                
-            </ul>
-        </div>
+    <div class="contact-info text-start">
+      <div class="icon-text"><i class="bi bi-envelope"></i> cunananhannahcamille@gmail.com</div>
+      <div class="icon-text"><i class="bi bi-phone"></i> +63 946 159 2782</div>
+      <div class="icon-text"><i class="bi bi-geo-alt"></i> Capas, Tarlac</div>
     </div>
-<div class="section">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="fullname">Full Name:</label><br>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br>
 
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+    <h5 class="mt-4">Skills</h5>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>Teamwork</li>
+    </ul>
+  </div>
 
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your contact number"><br>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea><br>
+  <div class="right-panel">
+    <h1>About Me</h1>
+    <h2>"In God we trust, in Christ we find peace."</h2>
+    <p>I’m a 3rd year BSIT student aiming to become a successful IT professional. I enjoy developing new ideas and working in team environments that challenge my skills and creativity.</p>
 
-                <button type="submit">Send Message</button>
-            </form>
+    <h2>Education</h2>
+    <div class="section">
+      <p><strong>Capas National High School</strong> – STEM Strand</p>
+      <p>2018-2019</p>
+      <p><strong>Dominican College of Tarlac</strong> – BS in Information Technology</p>
+      <p>2022 – Present</p>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="section">
+      <p><strong>System Design Project</strong> – Academic Project</p>
+      <ul>
+        <li>Created a prototype of an inventory system.</li>
+        <li>Collaborated in a team to analyze requirements and document SDLC phases.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container no-print my-5">
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Send a Message</h5>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your message here...">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Send Message</button>
+          </form>
         </div>
-        <div class="section">
-            <h2>Suggestions or Comments</h2>
-            <form>
-                <label for="comment">Write your feedback:</label><br>
-                <textarea id="comment" name="comment" rows="6" cols="80" placeholder="Enter your comment here..."></textarea><br><br>
-                <button type="submit">Submit</button>
-            </form>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Leave a Comment</h5>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your comment here...">
+            </div>
+            <button type="submit" class="btn btn-secondary w-100">Submit Comment</button>
+          </form>
         </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="text-center mt-4">
+    <button onclick="window.print()" class="btn btn-primary">
+      <i class="bi bi-printer"></i> Print Resume
+    </button>
+  </div>
+</div>
 
 </body>
 </html>
